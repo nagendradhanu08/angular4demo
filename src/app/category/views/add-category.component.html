@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-12 ">
+        <!-- general form elements -->
+        <div class="box box-primary ">
+            <div class="box-header with-border">
+                <h3 class="box-title"> Add Products</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <div class="col-md-8 col-md-pop-3"> 
+                <form role="form" novalidate [formGroup]="category" ngNoForm>
+                    <div class="box-body">
+                        <label>Product Name</label>
+                        <!-- dirty and touche for validation purpose -->
+                        <div class="form-group"  [ngClass]="{
+                            'has-danger': name.invalid && (name.dirty || name.touched),
+                            'has-success': name.valid && (name.dirty || name.touched)
+                       }">
+                            <input type="text" class="form-control" [(ngModel)]="CategoryData.name"  placeholder="Enter Category Name"  formControlName="name" >
+                                
+                            <div
+                                 *ngIf="name?.errors && (name?.dirty || name?.touched)">
+                                  <p *ngIf="name?.errors.required">Category Name is required</p>
+                            </div>
+                        </div>
+                         <label>Quantity </label>
+                          <div class="form-group"  [ngClass]="{
+                            'has-danger': quantity.invalid && (quantity.dirty || quantity.touched),
+                            'has-success': quantity.valid && (quantity.dirty || quantity.touched)
+                       }">
+                            <input type="text" class="form-control" [(ngModel)]="CategoryData.quantity"  placeholder="Enter quantity"  formControlName="quantity" >
+                                
+                            <div
+                                 *ngIf="quantity?.errors && (quantity?.dirty || quantity?.touched)">
+                                  <p *ngIf="quantity?.errors.required">quantity is required</p>
+                            </div>
+                        </div>
+                    </div>
+                      <pre>{{category.value | json}}</pre>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                       
+                        <button type="button" (click)="saveCategory()" [disabled]="!category.valid" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.box -->
+    </div>
+</div>

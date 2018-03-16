@@ -1,0 +1,43 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "POWDERS",
+            "quantity": "1500"
+          
+        },
+        {
+            "id": 2,
+            "name": "BAR & SLICES",
+            "quantity": "100"
+        },
+        {
+            "id": 3,
+            "name": "SPECIALITY",
+            "quantity": "150"
+           
+        },
+        {
+            "id": 4,
+            "name": "INSTANT PRE MIX",
+            "quantity": "120"
+        },
+        {
+            "id": 5,
+            "name": "TEAS",
+            "quantity": "12"
+        },
+        {
+            "id": 6,
+            "name": "PURE FRUIT AND VEGETABLE BASED BEVERAGEMIX",
+            "quantity": "120"
+        },
+        {
+            "id": 7,
+            "name": "DEHYDRATED ROASTED VEGETABLE SNACKS",
+            "quantity": "1200"
+        }
+    ],
+    "success": true,
+    "message": "successfully category display"
+}
